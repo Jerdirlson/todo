@@ -1,0 +1,7 @@
+Para correr el front solo hay que instalar las dependencias con
+
+    -npm i
+
+para correr el front se ejecuta 
+
+    -npm run dev

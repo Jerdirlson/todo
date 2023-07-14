@@ -1,0 +1,11 @@
+Para correr el back con typescript incialmente se debe instalar todas las dependencias
+
+    -npm i
+
+Seguido se pone a correr el watch del typescript
+
+    -tsc --watch
+
+Despues se ejecuta el comando para correr el back 
+
+    -nom run start
