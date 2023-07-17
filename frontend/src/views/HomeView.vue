@@ -3,6 +3,22 @@ import TheWelcome from '../components/TheWelcome.vue'
 import boton from '../components/boton.vue'
 import headerc from '@/components/header.vue';
 import todocard from '@/components/todocard.vue';
+import io from 'socket.io-client';
+import axios from 'axios';
+import { onBeforeMount, onBeforeUnmount } from 'vue';
+import { useTodosStore } from '../stores/todo';
+
+
+const host = '127.0.0.1';
+const todos = useTodosStore();
+
+onBeforeMount(async () => {
+  console.log('Aqui esta entrando')
+  const response = await axios.get('http://127.0.0.1:8081/todo')
+  console.log(response);
+  todos.setTodo(response.data);
+
+});
 
 
 
